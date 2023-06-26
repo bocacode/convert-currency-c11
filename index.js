@@ -14,7 +14,7 @@ function convertUSDtoWon(event) { // conversion
   "$" + usd.toLocaleString() + " USD is equal to " + won.toLocaleString() + " Korean Won"
 
   const forintH3 = document.createElement('h3')
-  forintH3.innertext = `$${usd.toLocaleString()} USD is equal to ${forint.toLocaleString()} Hungarian forints`
+  forintH3.innerText = `$${usd.toLocaleString()} USD is equal to ${forint.toLocaleString()} Hungarian forints`
   document.querySelector('body').appendChild(forintH3)
 
   const ruble = usd / 0.012
