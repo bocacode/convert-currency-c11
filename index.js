@@ -8,4 +8,9 @@ function convertUSDtoWon(event) { // conversion
   // Now display on page:
   document.querySelector('h2').innerText = 
   "$" + usd.toLocaleString() + " USD is equal to " + won.toLocaleString() + " Korean Won"
+
+  const egp = usd * 30.90 // convert to egyptian currency
+  const egpH3 = document.createElement('h3')
+  egpH3.innerText = `$${usd.toLocaleString()} USD is equal to ${egp.toLocaleString()} Egyptian Pound`;
+  document.querySelector('body').appendChild(yenH3)
 }
