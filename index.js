@@ -1,20 +1,22 @@
-const form = document.querySelector('form') // grab the form
-form.addEventListener('submit', handleConvert) // onsubmit
+function setupApp(){
+  const rubleH3 = document.createElement('h3')
+  document.querySelector('body').appendChild(rubleH3)
+  
+  const cadH3 = document.createElement('h3')
+  document.querySelector('body').appendChild(cadH3)
+  
+  const forintH3 = document.createElement('h3')
+  document.querySelector('body').appendChild(forintH3)
+  
+  const pesoH3 = document.createElement('h3')
+  document.querySelector('body').appendChild(pesoH3)
+  
+  const yenH3 = document.createElement('h3')
+  document.querySelector('body').appendChild(yenH3)
 
-const rubleH3 = document.createElement('h3')
-document.querySelector('body').appendChild(rubleH3)
-
-const cadH3 = document.createElement('h3')
-document.querySelector('body').appendChild(cadH3)
-
-const forintH3 = document.createElement('h3')
-document.querySelector('body').appendChild(forintH3)
-
-const pesoH3 = document.createElement('h3')
-document.querySelector('body').appendChild(pesoH3)
-
-const yenH3 = document.createElement('h3')
-document.querySelector('body').appendChild(yenH3)
+  const form = document.querySelector('form') // grab the form
+  form.addEventListener('submit', handleConvert) // onsubmit
+}
 
 function handleConvert(event) {
   event.preventDefault() // stop form from refreshing page
@@ -61,3 +63,5 @@ function convertUSDtoWon(usd) {
   document.querySelector('h2').innerText =
     '$' + usd.toLocaleString() + ' USD is equal to ' + won.toLocaleString() + ' Korean Won'
 }
+
+setupApp()
