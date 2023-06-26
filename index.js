@@ -1,8 +1,13 @@
 const form = document.querySelector('form') // grab the form
 form.addEventListener("submit", convertUSDtoWon) // onsubmit
 
+
+const SolH3 = document.createElement("h3");
+document.querySelector('body').appendChild(SolH3)
+
 const rubleH3 = document.createElement("h3");
 document.querySelector('body').appendChild(rubleH3)
+
 
 function convertUSDtoWon(event) { // conversion
   event.preventDefault() // stop form from refreshing page
@@ -12,6 +17,10 @@ function convertUSDtoWon(event) { // conversion
   // Now display on page:
   document.querySelector('h2').innerText = 
   "$" + usd.toLocaleString() + " USD is equal to " + won.toLocaleString() + " Korean Won"
+
+
+  const peruvianSol = usd * 3.63;
+  SolH3.innerText = "$" + usd.toLocaleString() + " USD is equal to " + peruvianSol.toLocaleString() + " Peruvian sol"
 
   const cad = usd * 1.26 //convert to Canadian Dollar
   const cadH3 = document.createElement('h3')
@@ -32,5 +41,6 @@ function convertUSDtoWon(event) { // conversion
   const yenH3 = document.createElement('h3')
   yenH3.innerText = `$${usd.toLocaleString()} USD is equal to ${yen.toLocaleString()} Japanese Yen`
   document.querySelector('body').appendChild(yenH3)
+
 
 }
