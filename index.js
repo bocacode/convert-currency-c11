@@ -8,4 +8,10 @@ function convertUSDtoWon(event) { // conversion
   // Now display on page:
   document.querySelector('h2').innerText = 
   "$" + usd.toLocaleString() + " USD is equal to " + won.toLocaleString() + " Korean Won"
+
+const tugrik = usd * 3516.8543 // convert to tugrik
+const tugrikH3 = document.createElement('h3')
+//tugrikH3.innerText = "$" + usd.toLocaleString() + "USD is equal to " + tugrik.toLocaleString() + " Mongolian Tugrik"
+tugrikH3.innerText = `$${usd.toLocaleString()} USD is equal to ${tugrik.toLocaleString()} Mongolian Tugrik`
+document.querySelector('body').appendChild(tugrikH3)
 }
