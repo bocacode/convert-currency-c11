@@ -23,4 +23,10 @@ function convertUSDtoWon(event) { // conversion
   const pesoH3 = document.createElement('h3')
   pesoH3.innerText = `$${usd.toLocaleString()} USD is equal to ${peso.toLocaleString()}Colombian pesos`
   document.querySelector('body').appendChild(pesoH3)
+  
+  const yen = usd * 143.48 // convert to Yen
+  const yenH3 = document.createElement('h3')
+  yenH3.innerText = `$${usd.toLocaleString()} USD is equal to ${yen.toLocaleString()} Japanese Yen`
+  document.querySelector('body').appendChild(yenH3)
+
 }
