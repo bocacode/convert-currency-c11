@@ -34,3 +34,8 @@ function convertUSDtoWon(event) { // conversion
   document.querySelector('body').appendChild(yenH3)
 
 }
+
+const romainianLeu = usd * 4.54;
+const romainianLeuH3 = document.createElement('h3')
+romainianLeuH3.innerText= `$${usd.toLocaleString()} USD is to ${romainianLeu.toLocaleString} Romainian Leu`;
+document.querySelector('body').appendChild(romainianLeuH3)
