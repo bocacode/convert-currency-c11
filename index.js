@@ -8,4 +8,9 @@ function convertUSDtoWon(event) { // conversion
   // Now display on page:
   document.querySelector('h2').innerText = 
   "$" + usd.toLocaleString() + " USD is equal to " + won.toLocaleString() + " Korean Won"
+
+  const peso = usd * 0.00024 //convert to colombian peso
+  const pesoH3 = document.createElement('h3')
+  pesoH3.innerText = `$${usd.toLocaleString()} USD is equal to ${peso.toLocaleString()}Colombian pesos`
+  document.querySelector('body').appendChild(pesoH3)
 }
