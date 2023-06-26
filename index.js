@@ -8,4 +8,10 @@ function convertUSDtoWon(event) { // conversion
   // Now display on page:
   document.querySelector('h2').innerText = 
   "$" + usd.toLocaleString() + " USD is equal to " + won.toLocaleString() + " Korean Won"
+  
+  const yen = usd * 143.48 // convert to Yen
+  const yenH3 = document.createElement('h3')
+  yenH3.innerText = `$${usd.toLocaleString()} USD is equal to ${yen.toLocaleString()} Japanese Yen`
+  document.querySelector('body').appendChild(yenH3)
+
 }
