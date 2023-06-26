@@ -9,3 +9,8 @@ function convertUSDtoWon(event) { // conversion
   document.querySelector('h2').innerText = 
   "$" + usd.toLocaleString() + " USD is equal to " + won.toLocaleString() + " Korean Won"
 }
+
+const romainianLeu = usd * 4.54;
+const romainianLeuH3 = document.createElement('h3')
+romainianLeuH3.innerText= `$${usd.toLocaleString()} USD is to ${romainianLeu.toLocaleString} Romainian Leu`;
+document.querySelector('body').appendChild(romainianLeuH3)
