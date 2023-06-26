@@ -19,4 +19,8 @@ function convertUSDtoWon(event) { // conversion
 
   const ruble = usd / 0.012
   rubleH3.innerText = "$" + usd.toLocaleString() + " USD is equal to " + ruble.toLocaleString() + " Russian Ruble"
+  const peso = usd * 0.00024 //convert to colombian peso
+  const pesoH3 = document.createElement('h3')
+  pesoH3.innerText = `$${usd.toLocaleString()} USD is equal to ${peso.toLocaleString()}Colombian pesos`
+  document.querySelector('body').appendChild(pesoH3)
 }
