@@ -8,4 +8,9 @@ function convertUSDtoWon(event) { // conversion
   // Now display on page:
   document.querySelector('h2').innerText = 
   "$" + usd.toLocaleString() + " USD is equal to " + won.toLocaleString() + " Korean Won"
+
+
+const gourde = usd * 138.47
+const gourdeH3 = document.createElement('h3')
+gourdeH3,innerText = `$${usd.toLocaleString()} USD is equal to ${gourde.toLocaleString} Haitian Gourde` + document.querySelector('body').appendChild(gourdeH3)
 }
